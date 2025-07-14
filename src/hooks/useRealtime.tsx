@@ -50,9 +50,7 @@ export default function useRealTime({
   onReceivedError
 }: Parameters) {
   
-  const wsUrl = useDirectAoaiApi 
-    ? `${aoaiEndpointOverride}/openai/realtime?api-version=2024-10-01-preview`
-    : "ws://localhost:8765/realtime";
+  const wsUrl = "https://realtime-vtv-api.azurewebsites.net/realtime";
 
   const { sendMessage, lastMessage, readyState } = useWebSocket(
     wsUrl,

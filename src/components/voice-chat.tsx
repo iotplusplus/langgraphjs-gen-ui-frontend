@@ -151,7 +151,7 @@ export default function VoiceChat({ onClose, onVoiceModeChange, onTranscriptComp
   useEffect(() => {
     const checkBackendStatus = async () => {
       try {
-        const response = await fetch('http://localhost:8765/', {
+        const response = await fetch('https://realtime-vtv-api.azurewebsites.net', {
           method: 'GET',
           mode: 'no-cors' // This allows us to detect if the server is running
         });
